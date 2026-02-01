@@ -1,5 +1,5 @@
 // יייבוא ספריות וקומפוננטים
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       {/* ניתוב בין עמודים */}
-      <BrowserRouter basename="/cake-store">
+      <HashRouter basename="/cake-store">
         {/* ספק Context עם הפונקציות והמצב לכל הקומפוננטים */}
         <myContext.Provider value={{addProducts, products, deleteProduct}}>
           <Routes>
@@ -53,7 +53,7 @@ function App() {
           {/* כפתור וואטסאפ צף שיופיע בכל הדפים */}
           <WhatsappButton />
         </myContext.Provider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
