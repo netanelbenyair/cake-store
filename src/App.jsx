@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       {/* ניתוב בין עמודים */}
-      <HashRouter basename="/cake-store">
+      <HashRouter >
         {/* ספק Context עם הפונקציות והמצב לכל הקומפוננטים */}
         <myContext.Provider value={{addProducts, products, deleteProduct}}>
           <Routes>
