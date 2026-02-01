@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       {/* ניתוב בין עמודים */}
-      <BrowserRouter>
+      <BrowserRouter basename="/cake-store">
         {/* ספק Context עם הפונקציות והמצב לכל הקומפוננטים */}
         <myContext.Provider value={{addProducts, products, deleteProduct}}>
           <Routes>
